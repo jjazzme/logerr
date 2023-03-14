@@ -1,0 +1,24 @@
+{
+  "name": "@jjazzme/logerr",
+  "version": "0.1.0",
+  "description": "Old school error/notice logger",
+  "main": "./logger",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjazzme/logerr.git"
+  },
+  "keywords": [
+    "error",
+    "log",
+    "logging"
+  ],
+  "author": "Eugene Mironiouk <@jjazzme> (https://jjazz.me)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jjazzme/logerr/issues"
+  },
+  "homepage": "https://github.com/jjazzme/logerr#readme"
+}

@@ -1,0 +1,1 @@
+# Old school jjd error/notice logger
