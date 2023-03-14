@@ -1,6 +1,6 @@
 {
   "name": "@jjazzme/logerr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Old school error/notice logger",
   "main": "./logger",
   "scripts": {
