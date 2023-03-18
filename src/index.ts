@@ -1,7 +1,7 @@
 
 export enum EImportanceLevel {hidden= -1, notImportance, importance, veryImportance}
 export type TUserErrorType = 'common'
-export class Logger {
+export class Logerr {
     //TODO
     error(args: {hint?: string, level?: EImportanceLevel, ctx?: any }, ...e: any[]) {
         if (args.level === EImportanceLevel.hidden) return;
@@ -41,4 +41,4 @@ export class UserError {
     }
 }
 
-export const logger: Logger = new Logger();
+export const logerr: Logerr = new Logerr();
