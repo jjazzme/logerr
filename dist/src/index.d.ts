@@ -15,6 +15,10 @@ export declare class Logerr {
         hint?: string;
         level?: EImportanceLevel;
     }, ...e: any[]): void;
+    debug(args: {
+        hint?: string;
+        level?: EImportanceLevel;
+    }, ...e: any[]): void;
 }
 export declare class UserError {
     text: string;
