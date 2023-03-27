@@ -1,3 +1,4 @@
+/// <reference types="node" resolution-mode="require"/>
 export declare enum EImportanceLevel {
     hidden = -1,
     notImportance = 0,
@@ -6,6 +7,9 @@ export declare enum EImportanceLevel {
 }
 export type TUserErrorType = 'common';
 export declare class Logerr {
+    #private;
+    get env(): NodeJS.ProcessEnv | undefined;
+    set env(value: NodeJS.ProcessEnv | undefined);
     error(args: {
         hint?: string;
         level?: EImportanceLevel;

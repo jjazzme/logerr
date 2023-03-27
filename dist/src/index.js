@@ -1,5 +1,3 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
 export var EImportanceLevel;
 (function (EImportanceLevel) {
     EImportanceLevel[EImportanceLevel["hidden"] = -1] = "hidden";
@@ -8,7 +6,13 @@ export var EImportanceLevel;
     EImportanceLevel[EImportanceLevel["veryImportance"] = 2] = "veryImportance";
 })(EImportanceLevel || (EImportanceLevel = {}));
 export class Logerr {
-    //TODO
+    #env;
+    get env() {
+        return this.#env;
+    }
+    set env(value) {
+        this.#env = value;
+    }
     error(args, ...e) {
         if (args.level === EImportanceLevel.hidden)
             return;
@@ -40,7 +44,7 @@ export class Logerr {
         console.log(...rest);
     }
     debug(args, ...e) {
-        if (process.env.NODE_ENV && process.env.NODE_ENV.charAt(0).toLowerCase() === 'd')
+        if (this.env?.NODE_ENV?.charAt(0).toLowerCase() !== 'd')
             return;
         this.log(args, ...e);
     }

@@ -1,10 +1,13 @@
-import * as dotenv from 'dotenv'
-dotenv.config();
-
 export enum EImportanceLevel {hidden= -1, notImportance, importance, veryImportance}
 export type TUserErrorType = 'common'
 export class Logerr {
-    //TODO
+    #env?: NodeJS.ProcessEnv;
+    get env(): NodeJS.ProcessEnv | undefined {
+        return this.#env;
+    }
+    set env(value: NodeJS.ProcessEnv | undefined) {
+        this.#env = value;
+    }
     error(args: {hint?: string, level?: EImportanceLevel, ctx?: any }, ...e: any[]) {
         if (args.level === EImportanceLevel.hidden) return;
         args.level ??= EImportanceLevel.notImportance;
@@ -31,7 +34,7 @@ export class Logerr {
         console.log(...rest);
     }
     debug(args: {hint?: string, level?: EImportanceLevel}, ...e: any[]) {
-        if (process.env.NODE_ENV && process.env.NODE_ENV.charAt(0).toLowerCase() === 'd') return;
+        if (this.env?.NODE_ENV?.charAt(0).toLowerCase() !== 'd') return;
         this.log(args, ...e);
     }
 }
