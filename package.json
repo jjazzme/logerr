@@ -7,8 +7,8 @@
     "scripts": {
         "clean": "jj-utils -clean ./dist/src",
         "prepare": "jj-utils -prepare ./dist/src",
-        "repack-dev": "jj-utils -package dev -repack",
-        "repack-prod": "jj-utils -package prod -repack",
+        "repack-dev": "jj-utils -sourcemap add -package dev -repack",
+        "repack-prod": "jj-utils -sourcemap remove -package prod -repack",
         "x-repack": "rm -rf ./node_modules && rm -rf ./package-lock.json && npm install",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

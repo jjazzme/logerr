@@ -1,13 +1,18 @@
 {
-  "compilerOptions": {
-    "module": "ES2022",
-    "target": "es2022",
-    "strict": true,
-    "rootDir": ".",
-    "declaration": true,
-    "moduleResolution": "NodeNext",
-    "outDir": "./dist"
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["./example"]
+    "compilerOptions": {
+        "module": "ES2022",
+        "target": "es2022",
+        "strict": true,
+        "rootDir": ".",
+        "declaration": true,
+        "moduleResolution": "NodeNext",
+        "outDir": "./dist",
+        "sourceMap": false
+    },
+    "include": [
+        "./src/**/*.ts"
+    ],
+    "exclude": [
+        "./example"
+    ]
 }

@@ -1,0 +1,12 @@
+{
+  "prod": {
+    "dependencies": {
+      "@jjazzme/utils": "jjazzme/utils#last"
+    }
+  },
+  "dev": {
+    "dependencies": {
+      "@jjazzme/utils": "file:../utils"
+    }
+  }
+}
